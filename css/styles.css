@@ -1,0 +1,631 @@
+/* start global rules */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary-color: #000000;
+    --primary-color-2: #041113;
+    --primary-color-3: #133236;
+    --secondary-color: #ff5a3c;
+    --secondary-color-2: #cb3421;
+    --secondary-color-3: #fb412a;
+    --heading-color: #071c1f;
+    --paragraph-color: #5c727d;
+    --bs-dark: #212529;
+    --white-color: white;
+    --main-transition: 0.3s;
+    --padding-top: 7rem;
+    --padding-bottom: 7rem;
+    --border-color-2: #1e2021;
+    --border-color-3: #5c617f;
+    --border-color-4: #eb6954;
+    --border-color-5: #bc3928;
+    --border-color-6: #103034;
+    --border-color-7: #d1dae0;
+    --border-color-8: #f6f6f6;
+    --border-color-9: #e4ecf2;
+    --border-color-10: #ebeeee;
+    --border-color-11: #ededed;
+    --border-color-12: #e1e6ff;
+    --border-color-13: #f1f8ff;
+
+}
+
+body {
+    font-family: 'Merriweather', serif;
+    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+    font-family: 'Work Sans', sans-serif;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding-right: 0.9rem;
+    padding-left: 0.9rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* animations */
+@keyframes playAnimation {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* end animations */
+
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* end global rules */
+/* style 1 */
+.style {
+    background-color: var(--border-color-11);
+    position: relative;
+}
+
+.style .container {
+    display: flex;
+    align-items: center;
+    padding: 4.4rem 0;
+    flex-wrap: wrap;
+
+}
+
+.style .tip {
+    display: flex;
+    padding: 1rem 0;
+    color: var(--border-color-2);
+    font-weight: bold;
+}
+
+.style .tip i {
+    color: var(--secondary-color);
+    padding-right: 0.7rem;
+}
+
+.style h2 {
+    color: var(--bs-dark);
+    font-size: 4rem;
+}
+
+.style .box-style {
+    width: 50%;
+}
+
+.style .image {
+    width: 50%;
+}
+
+.style img {
+    max-width: 100%;
+}
+
+.style h2+p {
+    font-size: 1rem;
+    margin: 2rem 0;
+    color: var(--bs-dark);
+    padding: 0.6rem;
+    border-left: 0.1rem solid red;
+}
+
+.style button {
+    border: none;
+    padding: 1.3rem 1.9rem;
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    margin-right: 1rem;
+    position: relative;
+    transition: var(--main-transition);
+
+}
+
+.style button+i {
+    background-color: var(--white-color);
+    color: var(--secondary-color);
+    padding: 1.3rem;
+    border-radius: 50%;
+}
+
+.slice {
+    justify-content: center;
+}
+
+.slice .container {
+    display: flex;
+    position: absolute;
+    top: 95%;
+    background-color: var(--white-color);
+    z-index: 8;
+    justify-content: center;
+    box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.3);
+    padding: 2rem;
+}
+
+.custom-dropdown select {
+    width: 15rem;
+    padding: 1rem;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: var(--white-color);
+
+}
+
+.custom-dropdown option {
+    background-color: #fff;
+    color: #333;
+}
+
+form {
+    margin-right: 1rem;
+}
+
+.slice button {
+    border: none;
+    background-color: var(--secondary-color);
+    padding: 1rem 3rem;
+    align-items: center;
+    color: var(--white-color);
+}
+
+/* end style */
+/* start about us*/
+.about {
+    padding-top: calc(var(--padding-top) + 3rem);
+    padding-bottom: var(--padding-bottom);
+    position: relative;
+}
+
+.about .container {
+    display: flex;
+    gap: 5%;
+}
+
+.about .image {
+    width: 50%;
+}
+
+.about .card {
+    width: 50%;
+}
+
+.about img {
+    display: block;
+    max-width: 100%;
+}
+
+.about img:first-of-type {
+    position: relative;
+}
+
+.about img:nth-of-type(2) {
+    position: absolute;
+    top: 30rem;
+    display: flex;
+}
+
+.about .fa-play {
+    position: absolute;
+    background-color: var(--white-color);
+    color: var(--secondary-color);
+    padding: 1.7rem;
+    border-radius: 50%;
+    top: 60%;
+    left: 22%;
+    animation: playAnimation 1s infinite;
+}
+
+
+.special-button:first-of-type {
+    border: none;
+    background-color: var(--border-color-4);
+    color: var(--border-color-2);
+    padding: 0.3rem 0.8rem;
+    border-radius: 0.8rem;
+    margin: 1rem;
+}
+
+.about h3 {
+    color: var(--border-color-2);
+    font-weight: bold;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.about p {
+    color: var(--border-color-3);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.about .icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.about .icon {
+    display: flex;
+    align-items: center;
+}
+
+.about .icon p {
+    padding: 1rem 0 0 1rem;
+}
+
+.about .icon i {
+    background-color: var(--border-color-4);
+    color: var(--border-color-2);
+    padding: 0.5rem;
+    border-radius: 50%;
+    margin: 0.1rem 0.1rem 0 0;
+}
+
+.about .border {
+    margin-top: 1rem;
+    padding: 1rem 4rem 1rem 2rem;
+    background-color: var(--border-color-4);
+    color: var(--border-color-2);
+    border-left: 5px solid var(--border-color-2);
+}
+
+.about button:nth-of-type(2) {
+    background-color: var(--secondary-color);
+    border: none;
+    text-transform: uppercase;
+    color: var(--white-color);
+    padding: 1.5rem 1.8rem;
+}
+
+/* end about us*/
+/* start section */
+.section {
+    background-color: var(--border-color-10);
+    position: relative;
+    padding: var(--padding-top) 0;
+}
+
+.section .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) ;
+}
+
+.section .box {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #212529;
+    font-weight: bold;
+    transition: var(--main-transition);
+}
+
+.section i {
+    display: block;
+    font-size: 2rem;
+    padding: 2rem 0;
+    color: var(--secondary-color);
+}
+
+.section span {
+    font-size: 2.5rem;
+    padding: 1rem;
+}
+
+.section p {
+    padding: 1rem;
+}
+
+/* end section */
+/* properties */
+.Properties {
+    padding-top: var(--padding-top);
+    padding-bottom: var(--padding-bottom);
+    position: relative;
+}
+
+.Properties .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Properties .card {
+    width: 60%;
+}
+
+.Properties button:first-of-type {
+    border: none;
+    background-color: var(--border-color-4);
+    color: var(--border-color-2);
+    padding: 0.3rem 0.8rem;
+    border-radius: 0.8rem;
+    margin: 1rem;
+}
+
+.Properties h3 {
+    color: var(--border-color-2);
+    font-weight: bold;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.Properties .space {
+    position: relative;
+    padding: 1rem 0;
+}
+
+.Properties .space p {
+    position: relative;
+    padding: 0 1.5rem;
+    align-items: center;
+}
+
+.Properties .space p::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 1rem;
+    height: 2px;
+    background-color: var(--secondary-color);
+
+}
+
+.Properties p {
+    color: var(--border-color-3);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.smaller {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.small:not(:first-of-type) {
+    border-left: 1px solid var(--border-color-3);
+    padding: 0 1rem;
+}
+
+
+.smaller p {
+    padding-top: 0.5rem;
+    font-size: 1rem;
+}
+
+.Properties .big-img {
+    width: 50%;
+}
+
+.Properties .big-img img {
+    max-width: 100%;
+}
+
+.Properties .small-img img {
+    width: 10rem;
+}
+
+/* end properties */
+/* Focus */
+.focus {
+    padding-top: var(--padding-top);
+    padding-bottom: var(--padding-bottom);
+    position: relative;
+    background-color: var(--border-color-11);
+}
+
+.focus .container {
+    text-align: center;
+}
+
+.focus h3 {
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.focus .content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+    gap: 1rem;
+    margin-top: 2.5rem;
+}
+
+.focus .card {
+    background-color: var(--white-color);
+    color: #212529;
+    position: relative;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    background-color: var(--secondary-color);
+    left: 0;
+    bottom: 0;
+    width: 0px;
+    height: 3px;
+    transition: var(--main-transition);
+}
+
+.card:hover::before {
+    width: 100%;
+}
+
+.focus .card .fa-house,
+.fa-location-dot {
+    font-size: 3rem;
+    padding: 2rem;
+    color: var(--secondary-color);
+}
+
+.focus .card h4 {
+    padding: 2.5rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.focus .card p {
+    padding: 1rem;
+}
+
+.focus span {
+    margin: 0.5rem;
+    display: block;
+    transition: var(--main-transition);
+}
+
+.focus .card:hover span {
+    color: var(--secondary-color);
+}
+
+/* end Focus */
+/* Featured */
+.Featured {
+    padding-top: var(--padding-top);
+    padding-bottom: var(--padding-bottom);
+    position: relative;
+}
+
+.Featured .titel {
+    text-align: center;
+}
+
+.Featured .titel h3 {
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+
+.Featured .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+    gap: 2rem;
+    margin-top: 2.5rem;
+}
+
+.Featured img {
+    max-width: 100%;
+}
+
+.Featured .image {
+    position: relative;
+}
+
+.Featured .image::before {
+    content: "for sale";
+    text-transform: uppercase;
+    position: absolute;
+    background-color: red;
+    right: 1rem;
+    top: 1rem;
+    padding: 0.5rem;
+    width: 6rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.Featured .slices {
+    position: absolute;
+    bottom: 1rem;
+    display: flex;
+    color: var(--white-color);
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.Featured .icons {
+    display: flex;
+    align-items: center;
+}
+
+.camera span {
+    background-color: var(--secondary-color);
+    padding: 0.5rem;
+    margin-right: 10px;
+    display: flex;
+}
+
+.Featured .body {
+    padding: 1rem;
+}
+
+.Featured .body span {
+    color: var(--secondary-color);
+    font-weight: bold;
+    display: block;
+    padding: 1rem 0;
+    font-size: 1.5rem;
+}
+
+.Featured .body h4 {
+    color: #1e2021;
+    padding: 1rem 0;
+    font-size: 1.5rem;
+}
+
+
+.Featured .smaller .nomo {
+
+}
+
+.photo {
+    width: 30px;
+}
+
+/*end  Properties */
